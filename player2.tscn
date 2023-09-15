@@ -6,6 +6,7 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Moto2" parent="." groups=["moto2"] instance=ExtResource("1_a76ub")]
+position = Vector2(1143, 167)
 
 [node name="Line2D" type="Line2D" parent="."]
 width = 5.0
