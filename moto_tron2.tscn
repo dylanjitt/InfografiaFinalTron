@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dneg7tlw81jx2"]
+
+[ext_resource type="PackedScene" uid="uid://bg2ow3mce86er" path="res://moto_tron.tscn" id="1_a8v46"]
+[ext_resource type="Texture2D" uid="uid://cdv6v327c3gq" path="res://orange_cycle.png" id="2_dpc0d"]
+
+[node name="Moto" instance=ExtResource("1_a8v46")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_dpc0d")
