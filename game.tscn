@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8uiy23fgbewk"]
+
+[ext_resource type="PackedScene" uid="uid://bg2ow3mce86er" path="res://moto_tron.tscn" id="1_u63he"]
+[ext_resource type="Script" path="res://trail1.gd" id="2_nes7p"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_y5gnj"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Moto" parent="." instance=ExtResource("1_u63he")]
+position = Vector2(409, 142)
+
+[node name="Line2D" type="Line2D" parent="."]
+width = 5.0
+default_color = Color(0, 1, 1, 1)
+script = ExtResource("2_nes7p")
+
+[node name="hitbox" type="Area2D" parent="Line2D"]
+collision_layer = 2
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Line2D/hitbox"]
+scale = Vector2(6, 1)
+shape = SubResource("SegmentShape2D_y5gnj")
+debug_color = Color(0.72549, 0.470588, 0.219608, 0.419608)
+
+[connection signal="playerDead" from="Moto" to="Line2D" method="_on_moto_player_dead"]
+[connection signal="turn" from="Moto" to="Line2D" method="_on_moto_turn"]
+[connection signal="updatePoints" from="Moto" to="Line2D" method="_on_moto_update_points"]
+[connection signal="area_entered" from="Line2D/hitbox" to="Moto" method="_on_hitbox_area_entered"]
