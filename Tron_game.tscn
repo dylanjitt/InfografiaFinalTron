@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://cs3tr1imecww6"]
+
+[ext_resource type="Texture2D" uid="uid://q12gej0ianou" path="res://arena1.png" id="1_8vtln"]
+[ext_resource type="PackedScene" uid="uid://doaxuao7ds3yc" path="res://player1.tscn" id="2_f5f3o"]
+[ext_resource type="PackedScene" uid="uid://bjmjxk4gtqt6t" path="res://player2.tscn" id="3_pi7p4"]
+[ext_resource type="PackedScene" uid="uid://igneoo7jua8g" path="res://hitbox.tscn" id="4_irhof"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(795, 454)
+scale = Vector2(0.85625, 0.881514)
+texture = ExtResource("1_8vtln")
+
+[node name="Player1" parent="." instance=ExtResource("2_f5f3o")]
+
+[node name="Node2D" parent="." instance=ExtResource("3_pi7p4")]
+
+[node name="P1_hitbox" parent="." instance=ExtResource("4_irhof")]
+position = Vector2(0, 416)
+scale = Vector2(1, 300)
+
+[node name="P1_hitbox2" parent="." instance=ExtResource("4_irhof")]
+position = Vector2(1597, 450)
+scale = Vector2(1, 300)
+
+[node name="P1_hitbox3" parent="." instance=ExtResource("4_irhof")]
+position = Vector2(793, 1)
+rotation = 1.5708
+scale = Vector2(1, 400)
+
+[node name="P1_hitbox4" parent="." instance=ExtResource("4_irhof")]
+position = Vector2(708, 900)
+rotation = 1.5708
+scale = Vector2(1, 400)

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjmjxk4gtqt6t"]
+
+[ext_resource type="PackedScene" uid="uid://52ugdhurmjxm" path="res://moto_2.tscn" id="1_a76ub"]
+[ext_resource type="Script" path="res://trail2.gd" id="2_epn03"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Moto2" parent="." groups=["moto2"] instance=ExtResource("1_a76ub")]
+
+[node name="Line2D" type="Line2D" parent="."]
+width = 5.0
+default_color = Color(1, 0.356863, 0.0666667, 1)
+script = ExtResource("2_epn03")
+
+[connection signal="moving" from="Moto2" to="Line2D" method="_on_moto_2_moving"]
+[connection signal="playerDead" from="Moto2" to="Line2D" method="_on_moto_2_player_dead"]
+[connection signal="turn" from="Moto2" to="Line2D" method="_on_moto_2_turn"]
+[connection signal="updatePoints" from="Moto2" to="Line2D" method="_on_moto_2_update_points"]

@@ -12,7 +12,9 @@ func _process(delta):
 	
 func _on_P1_hitbox_area_entered(area):
 	get_tree().call_group("moto","dead")
+	get_tree().call_group("moto2","dead")
 
 
 func _on_area_entered(area):
 	get_tree().call_group("moto","dead")
+	get_tree().call_group("moto2","dead")
