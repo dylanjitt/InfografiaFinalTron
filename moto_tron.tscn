@@ -360,7 +360,7 @@ _data = {
 radius = 4.12312
 
 [node name="Moto" type="CharacterBody2D" groups=["moto"]]
-position = Vector2(412, 151)
+position = Vector2(239, 140)
 script = ExtResource("1_2qhl8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

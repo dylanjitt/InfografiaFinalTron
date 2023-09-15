@@ -338,7 +338,7 @@ height = 56.0
 position = Vector2(484, 200)
 script = ExtResource("1_bqnai")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["moto2"]]
 position = Vector2(0, -50)
 rotation = 1.5708
 scale = Vector2(0.03, 0.03)

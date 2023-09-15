@@ -12,9 +12,9 @@ position = Vector2(795, 454)
 scale = Vector2(0.85625, 0.881514)
 texture = ExtResource("1_8vtln")
 
-[node name="Player1" parent="." instance=ExtResource("2_f5f3o")]
+[node name="Player1" parent="." groups=["moto"] instance=ExtResource("2_f5f3o")]
 
-[node name="Node2D" parent="." instance=ExtResource("3_pi7p4")]
+[node name="Player2" parent="." groups=["moto2"] instance=ExtResource("3_pi7p4")]
 
 [node name="P1_hitbox" parent="." instance=ExtResource("4_irhof")]
 position = Vector2(0, 416)
